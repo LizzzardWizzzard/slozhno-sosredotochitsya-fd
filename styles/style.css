@@ -10,11 +10,12 @@
   font-size: 18px;
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
 }
+
 .header {
   display: grid;
   block-size: 100vh;
   min-height: 668px;
-  padding: 0 1.5vh;
+  padding: 0 2vw;
 }
 
 .decorated-zone {
@@ -26,6 +27,7 @@
 .decorated-zone::before,
 .decorated-zone::after {
   content: "";
+  position: absolute;
   display: block;
   border: 4px solid var(--bg-color);
   z-index: 2;
@@ -51,8 +53,8 @@
 }
 
 .header__decorated-dark {
-  justify-self: end;
   position: relative;
+  justify-self: end;
   margin-top: 20px;
   margin-right: 25px;
   font-size: 1em;
@@ -105,6 +107,7 @@
 .header__theme-menu-button_active {
   border: 1px solid var(--btn-text-color);
 }
+
 .main__title {
   justify-self: start;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
@@ -113,11 +116,13 @@
 }
 
 .header__title-shadow {
+  padding-top: 20px;
   text-shadow: 4px 4px 0 var(--accent-color);
 }
 
+
 .header__block {
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .title-decor {
@@ -129,7 +134,7 @@
 
 .main {
   display: grid;
-  padding: 7.5vh 1.5vh 0;
+  padding: 6vh 3vw 0;
   background-color: var(--bg-color);
   z-index: 2;
   line-height: 23.4px;
@@ -140,7 +145,7 @@
 }
 
 .main__section:not(.section__can, .section__how) {
-  gap: 15px;
+  gap: 13px;
 }
 
 .section__title {
@@ -153,8 +158,16 @@
   margin-bottom: 50px;
 }
 
+.section__why-span {
+  margin-top: 5px;
+}
+
 .section__what {
-  margin-bottom: 50px;
+  margin-bottom: 45px;
+}
+
+.section__what-span {
+  margin-top: 5px;
 }
 
 .section__how {
@@ -211,7 +224,7 @@
 
 .footer {
   display: grid;
-  padding: 0 1.5vw;
+  padding: 0 3vw;
   block-size: 100vh;
   min-height: 667px;
   background-color: var(--bg-color);
