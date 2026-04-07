@@ -14,7 +14,7 @@
   display: grid;
   block-size: 100vh;
   min-height: 668px;
-  padding: 0 3vh;
+  padding: 0 1.5vh;
 }
 
 .decorated-zone {
@@ -53,7 +53,8 @@
 .header__decorated-dark {
   justify-self: end;
   position: relative;
-  margin-right: 1em;
+  margin-top: 20px;
+  margin-right: 25px;
   font-size: 1em;
   text-transform: uppercase;
   font-weight: 400;
@@ -61,6 +62,7 @@
   color: var(--accent-color);
   opacity: var(--decor-dark);
 }
+
 .header__decorated-dark::after {
   content: "";
   position: absolute;
@@ -72,17 +74,21 @@
   background-color: var(--accent-color);
   box-shadow: 0 0 10px var(--accent-color);
 }
+
 .header__theme-menu {
   justify-self: end;
   z-index: 3;
 }
+
 .header__theme-menu-list {
   display: grid;
   gap: 10px;
 }
+
 .header__theme-menu-button {
   background-color: transparent;
   border: none;
+  padding: 0 13px;
   color: var(--btn-text-color);
   text-transform: lowercase;
 }
@@ -110,6 +116,10 @@
   text-shadow: 4px 4px 0 var(--accent-color);
 }
 
+.header__block {
+  margin-bottom: 20px;
+}
+
 .title-decor {
   align-self: center;
   background-color: var(--accent-color);
@@ -119,19 +129,18 @@
 
 .main {
   display: grid;
-  padding: 5vh 5vh 0;
+  padding: 7.5vh 1.5vh 0;
   background-color: var(--bg-color);
   z-index: 2;
   line-height: 23.4px;
-  gap: 50px;
 }
 
 .main__section {
   display: grid;
 }
 
-.main__section:not(.section__can) {
-  gap: 20px;
+.main__section:not(.section__can, .section__how) {
+  gap: 15px;
 }
 
 .section__title {
@@ -139,6 +148,31 @@
   font-weight: 700;
   color: var(--section-title-color);
 }
+
+.section__why {
+  margin-bottom: 50px;
+}
+
+.section__what {
+  margin-bottom: 50px;
+}
+
+.section__how {
+  margin-bottom: 27px;
+}
+
+.section__how-title {
+  margin-bottom: 20px;
+}
+
+.section__how-span + .light {
+  margin-top: 15px;
+} 
+
+.section__how-text {
+  margin: 15px 0;
+}
+
 .light {
   font-weight: 400;
 }
@@ -163,8 +197,8 @@
 .section__can {
   display: grid;
   grid-template-columns: repeat(1, minmax(355px, 1fr));
-  gap: 20px;
-  padding: 10vh 0;
+  gap: 10px;
+  padding-bottom: 50px;
 }
 
 .gallery__item {
@@ -177,7 +211,7 @@
 
 .footer {
   display: grid;
-  padding: 0 2vw;
+  padding: 0 1.5vw;
   block-size: 100vh;
   min-height: 667px;
   background-color: var(--bg-color);
